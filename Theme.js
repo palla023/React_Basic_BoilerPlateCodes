@@ -33,12 +33,12 @@ export const colorTokens = {
 export const themeSettings = (mode) => {
   return {
     palette: {
-      mode: mode,
+      mode: mode,           //PM
       ...(mode === "dark"
         ? {
             // palette values for dark mode
-            primary: {
-              dark: colorTokens.primary[200],
+            primary: {                                       //PNB
+              dark: colorTokens.primary[200],                //DML
               main: colorTokens.primary[500],
               light: colorTokens.primary[800],
             },
@@ -104,3 +104,4 @@ export const themeSettings = (mode) => {
     },
   };
 };
+//Color Tokens -> ThemeSettings -> return (2)->Palatte,Typography = palatte->(Pm)mode -> PNB->DML
