@@ -1,0 +1,9 @@
+//whenever you are working on frontend, backend will not change
+{
+  "verbose": true,
+  "ignore": ["./client"],
+  "execMap": {
+    "rb": "ruby",
+    "pde": "processing --sketch={{pwd}} --run"
+  }
+}
