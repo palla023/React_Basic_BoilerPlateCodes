@@ -1,0 +1,30 @@
+npm install react-toastify
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const submitHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await RegisterUser(formData);
+      console.log("Registration response:", response);
+      toast.success("User Registered Successfully !", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      // Wait for the toast to be displayed for a few seconds
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      navigate("/login");
+    } catch (err) {
+      console.log("Registration Error:", err);
+      toast.error("Email already Exists !", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
+  };
+  
+  return (
+  <div className="Register">
+    {/* ...existing code... */}
+    <ToastContainer />
+  </div>
+);
