@@ -1,0 +1,16 @@
+<form onSubmit={submitHandler} className="mb-4">
+            <div className="d-flex">
+              <input
+                type="text"
+                className="form-control flex-grow-1"
+                value={data}
+                name="data"
+                onChange={(e) => setData(e.target.value)}
+                placeholder="Enter your task"
+                style={{ minWidth: "0" }} // Allows the input to shrink if needed
+              />
+              <button type="submit" className="btn btn-primary mx-2">
+                Add
+              </button>
+            </div>
+          </form>
